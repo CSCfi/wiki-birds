@@ -12,7 +12,7 @@ if len(sys.argv) != 2:
 else:
     # Get info for our bird
     bird = sys.argv[1]
-    print("Searching: %s" % bird)
+    print(f"Searching: {bird}")
     page_py = wiki_wiki.page(bird)
 
     # Let's make the soup!
