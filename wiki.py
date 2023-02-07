@@ -7,9 +7,7 @@ from bs4 import BeautifulSoup
 
 wiki_wiki = wikipediaapi.Wikipedia('fi')
 
-if len(sys.argv) != 2:
-    sys.exit("Missing bird's name as argument")
-else:
+try:
     # Get info for our bird
     bird = sys.argv[1]
     print(f"Searching: {bird}")
@@ -32,4 +30,7 @@ else:
     print(f"Page - Exists: {page_py.exists()}")
     print(f"Page - Title: {page_py.title}")
     print(f"Page - URL: {page_py.fullurl}")
-    print(f"Page - Image URL: {image_url}")
+    print(f"Page - Image URL: https:{image_url}")
+
+except IndexError:
+    print("Missing bird's name as argument")
