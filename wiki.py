@@ -26,11 +26,16 @@ try:
         if regex.search('wikipedia/.*/thumb/', image_lnk) and not regex.search('.svg', image_lnk):
             image_url = image_lnk
             break
+        else:
+            image_url = "Not found"
 
     print(f"Page - Exists: {page_py.exists()}")
     print(f"Page - Title: {page_py.title}")
     print(f"Page - URL: {page_py.fullurl}")
-    print(f"Page - Image URL: https:{image_url}")
+    if image_url == image_lnk:
+        print(f"Page - Image URL: https:{image_url}")
+    else:
+        print(f"Page - Image URL: {image_url}")
 
 except IndexError:
     print("Missing bird's name as argument")
