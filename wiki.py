@@ -9,7 +9,11 @@ wiki_wiki = wikipediaapi.Wikipedia('fi')
 
 try:
     # Get info for our bird
-    bird = sys.argv[1]
+    if len(sys.argv) != 2:
+        bird = input("Missing bird's as argument, please enter the name of the bird: ")
+    else:
+        bird = sys.argv[1]
+
     print(f"Searching: {bird}")
     page_py = wiki_wiki.page(bird)
 
@@ -37,5 +41,6 @@ try:
     else:
         print(f"Page - Image URL: {image_url}")
 
-except IndexError:
-    print("Missing bird's name as argument")
+except KeyboardInterrupt:
+    print("Hard exit, bye!")
+    raise
