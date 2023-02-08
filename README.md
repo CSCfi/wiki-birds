@@ -1,5 +1,5 @@
 # Python script to retrieve birds information from Wikipedia
-This python script will retrieve information from wikipedia.  
+This python script will retrieve information from wikipedia surch as Page title, URL, image URL. It also checks if the wiki page exists.  
 Here an output example:
 ```
 python3 wiki.py "Haarapääsky"
