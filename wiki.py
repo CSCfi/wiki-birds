@@ -10,7 +10,7 @@ wiki_wiki = wikipediaapi.Wikipedia('fi')
 try:
     # Get info for our bird
     if len(sys.argv) != 2:
-        bird = input("Missing bird's as argument, please enter the name of the bird: ")
+        bird = input("Missing bird's name as argument, please enter the name of the bird: ")
     else:
         bird = sys.argv[1]
 
