@@ -40,9 +40,9 @@ for birds in LIST:
         else:
             image_url = "Not found"
 
-    data = {"Title": title, "URL": url, "Image URL": image_url}
+    data = {birds:{"URL": url, "Image URL": image_url}}
 
     with open(LIST_OUT_PATH, "a") as f_out:
-        json.dump(data, f_out)
+        json.dump([data], f_out, indent=4)
 
 sys.exit("Process completed")
