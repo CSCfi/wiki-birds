@@ -3,17 +3,18 @@ import sys
 import requests
 import regex
 import json
-import os
 
 from bs4 import BeautifulSoup
+from pathlib import Path
 
-LIST_IN_PATH = os.path.join(os.path.dirname(__file__), "bird_species_id.json")
-LIST_OUT_PATH = os.path.join(os.path.dirname(__file__), "bird_species_array.json")
+BASE_DIR = Path(__file__).resolve().parent
+LIST_IN_PATH = BASE_DIR / "bird_species_id.json"
+LIST_OUT_PATH = BASE_DIR / "bird_species_array.json"
 
 wiki_wiki = wikipediaapi.Wikipedia('fi')
 birdsArray = []
 
-if os.path.exists(LIST_IN_PATH):
+if LIST_IN_PATH.exists():
     with open(LIST_IN_PATH, "r") as f_in:
         LIST = json.load(f_in)
 else:
