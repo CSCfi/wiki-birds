@@ -4,3 +4,4 @@ lib/
 pyvenv.cfg
 bird_species_id.json
 bird_species_array.json
+__pycache__/
