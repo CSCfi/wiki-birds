@@ -42,7 +42,7 @@ for birds in LIST:
         else:
             image_url = "Not found"
 
-    # Gathering data and append it to listObj
+    # Gathering data and append it to birdsArray
     data = {birds:{"URL": url, "Image URL": image_url}}
     birdsArray.append(data)
 
