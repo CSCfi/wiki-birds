@@ -46,7 +46,9 @@ for birds in LIST:
     data = {birds:{"URL": url, "Image URL": image_url}}
     birdsArray.append(data)
 
-with open(LIST_OUT_PATH, "a") as f_out:
+# Dump data to a new .json file
+with open(LIST_OUT_PATH, "w") as f_out:
         json.dump(birdsArray, f_out, indent=4)
 
+# End of process
 sys.exit("Process completed")
