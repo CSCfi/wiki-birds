@@ -7,15 +7,17 @@ import os
 
 from bs4 import BeautifulSoup
 
+LIST_IN_PATH = os.path.join(os.path.dirname(__file__), "bird_species_id.json")
+LIST_OUT_PATH = os.path.join(os.path.dirname(__file__), "bird_species_array.json")
+
 wiki_wiki = wikipediaapi.Wikipedia('fi')
-LIST_IN_PATH = os.path.join(os.path.dirname(__file__), "bird_species_id_testing.json")
-LIST_OUT_PATH = os.path.join(os.path.dirname(__file__), "bird_species_data.json")
+birdsArray = []
 
 if os.path.exists(LIST_IN_PATH):
     with open(LIST_IN_PATH, "r") as f_in:
         LIST = json.load(f_in)
 else:
-    sys.exit("Where's the list?")
+    sys.exit("Error, birds' list missing")
 
 # Get info from our json file
 for birds in LIST:
@@ -40,9 +42,11 @@ for birds in LIST:
         else:
             image_url = "Not found"
 
+    # Gathering data and append it to listObj
     data = {birds:{"URL": url, "Image URL": image_url}}
+    birdsArray.append(data)
 
-    with open(LIST_OUT_PATH, "a") as f_out:
-        json.dump([data], f_out, indent=4)
+with open(LIST_OUT_PATH, "a") as f_out:
+        json.dump(birdsArray, f_out, indent=4)
 
 sys.exit("Process completed")
