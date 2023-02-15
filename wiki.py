@@ -89,12 +89,11 @@ if __name__ == "__main__":
     try:
         if len(sys.argv) != 2:
             name = input("Missing bird's name as argument, please enter the name of the bird: ")
-        elif sys.argv != 
         else:
             name = sys.argv[1]
+
+        read_from_input(name)
 
     except KeyboardInterrupt:
         print("Hard exit, bye!")
         raise
-
-    read_from_input(name)
