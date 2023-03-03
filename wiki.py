@@ -83,17 +83,3 @@ def read_from_file (birdFilename):
 
     # End of process
     sys.exit("Process completed")
-
-if __name__ == "__main__":
-    # Get info for our bird
-    try:
-        if len(sys.argv) != 2:
-            name = input("Missing bird's name as argument, please enter the name of the bird: ")
-        else:
-            name = sys.argv[1]
-
-        read_from_input(name)
-
-    except KeyboardInterrupt:
-        print("Hard exit, bye!")
-        raise
