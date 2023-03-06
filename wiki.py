@@ -39,7 +39,7 @@ def read_from_input(birdName):
 
 def read_from_file (birdFilename):
     BASE_DIR = Path(__file__).resolve().parent
-    LIST_OUT_PATH = BASE_DIR / "bird_species_array.json"
+    LIST_OUT_PATH = BASE_DIR / birdFilename
     
     birdsArray = []
     birdFile = BASE_DIR / birdFilename
