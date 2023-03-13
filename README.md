@@ -26,7 +26,7 @@ Here is some examples:
 ```py
 python3
 >>> import wiki
->>> wiki.read_fron_input("Accipiter gentilis")
+>>> wiki.read_from_input("Accipiter gentilis")
 Searching: Accipiter gentilis
 Page - Exists: True
 Page - Title: Kanahaukka
