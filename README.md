@@ -19,10 +19,10 @@ This v3 version has two functions:
 - read_from_file()
 
 For the function **read_from_input()** you have to specify the name of the bird you want to retrieve information. (read_from_input(<"birdName">)).  
-For the function **read_from_file()**, you have to specify the name of the bird file. Should be a JSON Object file. (read_from_file(<"birdFilename">)).  
+For the function **read_from_file()**, you have to specify the name of the bird file. It must be a JSON Object file. (read_from_file(<"birdFilename">)).  
 
 When you use python, you can import the python script **wiki** and call the desired function.  
-Here is some examples:  
+Here are some examples:  
 ```py
 python3
 >>> import wiki
