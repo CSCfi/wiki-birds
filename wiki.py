@@ -59,7 +59,7 @@ def read_from_input(bird_name):
     except KeyError:
         print(f"{bird_name} seems not to be a valid name")
 
-def read_from_file (bird_filename):
+def read_from_file(bird_filename):
     """
     This function can be used after an import.
     
@@ -69,7 +69,7 @@ def read_from_file (bird_filename):
     The file must be a JSON Object
     """
     BASE_DIR = Path(__file__).resolve().parent
-    LIST_OUT_PATH = BASE_DIR / bird_filename
+    LIST_OUT_PATH = BASE_DIR / "bird_species_array.json"
 
     birdsArray = []
     birdFile = BASE_DIR / bird_filename
